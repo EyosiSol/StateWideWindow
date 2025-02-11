@@ -394,7 +394,7 @@ h1 {
 .checkout h2 {
   font-size: 24px;
   color: white;
-  text-align: center;
+  text-align: center; 
   width: 90%;
   font-weight: 800;
 }
@@ -416,7 +416,7 @@ h1 {
   width: 30%;
 }
 .products-section {
-  width: 80%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -443,15 +443,15 @@ h1 {
 .mid {
   width: 100%;
 }
+/* Existing CSS remains the same until the media queries */
+
+/* Tablet Styles */
 @media screen and (max-width: 1024px) {
   .hero {
-    padding: 12px 80px;
-    gap: 80px;
-    width: 100vw;
+    padding: 12px 40px 64px 40px;
+    gap: 60px;
   }
-  .menu-toggle {
-    display: block !important;
-  }
+
   .navbar {
     flex-direction: column;
     align-items: center;
@@ -460,21 +460,145 @@ h1 {
   .menu {
     align-items: center;
     text-align: center;
-    width: 100vw;
   }
-  /* 
- {
-    grid-template-columns: 100%;
-    gap: 20px;
-  } */
-  /* 
- .Logos {
-    flex-wrap: wrap;
+
+  .mid {
+    grid-template-columns: 1fr;
+    gap: 40px;
     justify-content: center;
-  } */
+    align-self: center;
+  }
 
   .zip {
     grid-column: 1;
     width: 100%;
+  }
+
+  .cta {
+    padding: 40px 20px;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .mid-section {
+    padding: 40px 20px;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-self: center;
+    width: 100%;
+  }
+
+  .header-images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .header-images img {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .products {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+
+  .footer .main-sections {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+  .hero {
+    padding: 12px 20px 64px 20px;
+    gap: 40px;
+  }
+  .icon {
+    display: flex;
+    justify-content: center;
+  }
+  .menu-toggle {
+    display: block !important;
+    cursor: pointer;
+    display: flex;
+    align-items: right;
+    text-align: left;
+    font-size: 36px;
+  }
+
+  .bottom {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .bottom.active {
+    display: flex;
+  }
+
+  .mid {
+    gap: 20px;
+  }
+
+  .content h1 {
+    font-size: 24px;
+  }
+
+  .content p {
+    font-size: 14px;
+  }
+
+  .zip h2 {
+    font-size: 20px;
+  }
+
+  .form input {
+    font-size: 14px;
+  }
+
+  .form button {
+    font-size: 14px;
+  }
+
+  .cta {
+    padding: 20px;
+  }
+
+  .mid-section {
+    padding: 20px;
+  }
+.header-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 100%;
+}
+  .header-images img {
+    width: 80%;
+  }
+
+  .products {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+
+  .footer .main-sections {
+    grid-template-columns: 1fr;
+  }
+
+  .states {
+    justify-content: center;
+  }
+
+  .states img {
+    width: 100px;
+  }
+
+  .checkout button {
+    width: 50%;
   }
 }

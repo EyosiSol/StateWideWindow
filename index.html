@@ -9,17 +9,23 @@
   <body>
     <div class="hero">
       <nav class="navbar">
-        <div class="menu-toggle" id="menu-toggle">☰</div>
         <div class="icon">
+          <div class="menu-toggle" id="menu-toggle">☰</div>
           <img src="icons/logo.png" alt="logo" />
         </div>
         <div class="menu">
-          <!-- <div class="top">
-              <a href="index.html">CAREERS</a>
-              <a href="about.html">CONTACT US</a>
-              <a href="services.html">WARRANTY</a>
-              <a href="contact.html">REQUEST CUSTOMER SERVER</a>
-            </div> -->
+          <!-- <div class="menu-toggle" id="menu-toggle">☰</div> -->
+          <div class="bottom" id="bottom">
+            <a href="">BATHROOMS</a>
+            <a href="">WINDOWS</a>
+            <a href="">KITCHEN</a>
+            <a href="">DOORS</a>
+            <a href="">GARAGE</a>
+            <a href="">CLOSETS</a>
+            <a href="">CUSTOMER SERVICE</a>
+            <a href="">ABOUT</a>
+            <a href="">LOCATION</a>
+          </div>
           <div class="mid">
             <h3>469-892-7167</h3>
             <button>Free Quote</button>
@@ -266,5 +272,13 @@
         </div>
       </footer>
     </section>
+    <script>
+      document
+        .getElementById("menu-toggle")
+        .addEventListener("click", function () {
+          var bottomMenu = document.getElementById("bottom");
+          bottomMenu.classList.toggle("active");
+        });
+    </script>
   </body>
 </html>
